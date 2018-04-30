@@ -22,27 +22,19 @@ app.config(function ($routeProvider) {
 
 app.controller("mainNewsController", ["$scope", "$http", function ($scope, $http) {
 
-    //const getEvents = () => {
-    //    let searchURL = "/api/news";
-    //    if ($scope.searchQuery) {
-    //        searchURL = searchURL + "?title=" + $scope.searchQuery
-    //    }
-    //    $http({
-    //        method: "GET",
-    //        url: searchURL
-    //    }).then(resp => {
-    //        console.log(resp.data);
-    //        $scope.events = resp.data;
-    //    })
-    //}
-
-    //$scope.searchForEvent = () => {
-    //    getEvents();
-    //}
+    const getLatestStories = () => {
+        $http({
+            method: "GET",
+            url: "/api/stories"
+        }).then(resp => {
+            console.log(resp.data);
+            $scope.stories = resp.data;
+        })
+    }
 
     var start = () => {
         $scope.pageTitle = "testing";
-        //getEvents();
+        getLatestStories();
     }
 
     start();
