@@ -209,6 +209,22 @@
     <Compile Include="Migrations\201804301736308_AddedRelationshipsBetweenTables.Designer.cs">
       <DependentUpon>201804301736308_AddedRelationshipsBetweenTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804301807294_SeedingCategories.cs" />
+    <Compile Include="Migrations\201804301807294_SeedingCategories.Designer.cs">
+      <DependentUpon>201804301807294_SeedingCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804301821336_Seeding.cs" />
+    <Compile Include="Migrations\201804301821336_Seeding.Designer.cs">
+      <DependentUpon>201804301821336_Seeding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804301924245_UpdateUser.cs" />
+    <Compile Include="Migrations\201804301924245_UpdateUser.Designer.cs">
+      <DependentUpon>201804301924245_UpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804301927040_UpdateUser2.cs" />
+    <Compile Include="Migrations\201804301927040_UpdateUser2.Designer.cs">
+      <DependentUpon>201804301927040_UpdateUser2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Story.cs" />
@@ -306,6 +322,18 @@
     <EmbeddedResource Include="Migrations\201804301736308_AddedRelationshipsBetweenTables.resx">
       <DependentUpon>201804301736308_AddedRelationshipsBetweenTables.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804301807294_SeedingCategories.resx">
+      <DependentUpon>201804301807294_SeedingCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804301821336_Seeding.resx">
+      <DependentUpon>201804301821336_Seeding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804301924245_UpdateUser.resx">
+      <DependentUpon>201804301924245_UpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804301927040_UpdateUser2.resx">
+      <DependentUpon>201804301927040_UpdateUser2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -321,7 +349,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>63207</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
