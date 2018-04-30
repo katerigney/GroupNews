@@ -12,8 +12,8 @@ namespace GroupNews.Models
         public string BodyContent { get; set; }
         public DateTime Timestamp { get; set; } = DateTime.Now;
 
-        public int UserID { get; set; }
-        public User Author { get; set; }
+        public int? UserID { get; set; }
+        public User User { get; set; }
 
         public int CategoryID { get; set; }
         public Category Category { get; set; }
