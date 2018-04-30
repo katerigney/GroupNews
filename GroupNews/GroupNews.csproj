@@ -211,6 +211,22 @@
     <Compile Include="Migrations\201804301736308_AddedRelationshipsBetweenTables.Designer.cs">
       <DependentUpon>201804301736308_AddedRelationshipsBetweenTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804301807294_SeedingCategories.cs" />
+    <Compile Include="Migrations\201804301807294_SeedingCategories.Designer.cs">
+      <DependentUpon>201804301807294_SeedingCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804301821336_Seeding.cs" />
+    <Compile Include="Migrations\201804301821336_Seeding.Designer.cs">
+      <DependentUpon>201804301821336_Seeding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804301924245_UpdateUser.cs" />
+    <Compile Include="Migrations\201804301924245_UpdateUser.Designer.cs">
+      <DependentUpon>201804301924245_UpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804301927040_UpdateUser2.cs" />
+    <Compile Include="Migrations\201804301927040_UpdateUser2.Designer.cs">
+      <DependentUpon>201804301927040_UpdateUser2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Story.cs" />
@@ -275,11 +291,21 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+<<<<<<< HEAD
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\app\views\Dashboard.html" />
+    <Content Include="Scripts\app\views\StoryPage.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+=======
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
     <Content Include="Scripts\jquery-3.0.0.slim.js" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+>>>>>>> dd457e62dd33edfedbd0ff44e1f8cca2ec8ca924
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
@@ -339,6 +365,18 @@
     <EmbeddedResource Include="Migrations\201804301736308_AddedRelationshipsBetweenTables.resx">
       <DependentUpon>201804301736308_AddedRelationshipsBetweenTables.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804301807294_SeedingCategories.resx">
+      <DependentUpon>201804301807294_SeedingCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804301821336_Seeding.resx">
+      <DependentUpon>201804301821336_Seeding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804301924245_UpdateUser.resx">
+      <DependentUpon>201804301924245_UpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804301927040_UpdateUser2.resx">
+      <DependentUpon>201804301927040_UpdateUser2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
@@ -361,7 +399,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>63207</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
