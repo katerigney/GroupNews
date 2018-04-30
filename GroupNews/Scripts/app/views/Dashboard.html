@@ -1,12 +1,10 @@
 ﻿<div>
-    <h1>{{pageTitle}}</h1>
-
+    <h1>Latest News</h1>
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="story in stories track by $index">
-            <h1>{{Category.Name}}</h1>
-
-            <h1><a href="#!/story/{{story.ID}}">{{story.Headline}}</a></h1>
-            <p>{{story.body}}</p>
+            <div><span class="badge badge-secondary">{{story.Category.Name}}</span></div>
+            <h3><a href="#!/stories/{{story.ID}}">{{story.Headline}}</a></h3>
+            <p>{{story.BodyContent | limitTo : 120}}...</p> <!--STILL NEED TO LIMIT CHAR COUNT-->
         </li>
     </ul>
 </div>

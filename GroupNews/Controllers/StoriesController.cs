@@ -17,7 +17,7 @@ namespace GroupNews.Controllers
             {
                 var latestStoriesQuery = db.Stories.Include(i => i.User).Include(i => i.Category);
 
-                var results = latestStoriesQuery.ToList();
+                var results = latestStoriesQuery.OrderBy(o => o.Timestamp).ToList();
 
                 if (results == null)
                 {

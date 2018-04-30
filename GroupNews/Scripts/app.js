@@ -21,6 +21,7 @@ app.config(function ($routeProvider) {
 })
 
 app.controller("mainNewsController", ["$scope", "$http", function ($scope, $http) {
+    $scope.charLimit = 5;
 
     const getLatestStories = () => {
         $http({
