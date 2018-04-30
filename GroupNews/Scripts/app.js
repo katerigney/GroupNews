@@ -2,17 +2,17 @@
 
 app.config(function ($routeProvider) {
 
-    $routeProvider.when("/news-dashboard", {
+    $routeProvider.when("/news/stories", {
         templateUrl: "/Scripts/app/views/Dashboard.html",
         controller: "mainNewsController"
     })
 
-    $routeProvider.when("/story/:storyID", {
+    $routeProvider.when("news/stories/:storyID", {
         templateUrl: "/Scripts/app/views/StoryPage.html",
         controller: "storyPageController"
     })
 
-    $routeProvider.when("/news-dashboard/create-story", {
+    $routeProvider.when("news/stories/create-story", {
         templateUrl: "/Scripts/app/views/CreateStory.html",
         controller: "createStoryController"
     })
