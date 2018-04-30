@@ -29,5 +29,25 @@ namespace GroupNews.Controllers
                 }
             }
         }
+
+        [HttpGet]
+        public IHttpActionResult GetOneStory(int id)
+        {
+            using (var db = new DataContext())
+            {
+                var query = db.Stories
+                    .Include(i => i.Category)
+                    .Include(i => i.User)
+                    .SingleOrDefault(s => s.ID == id);
+                if (query == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    return Ok(query);
+                }
+            }
+        }
     }
 }

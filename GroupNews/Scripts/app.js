@@ -20,6 +20,18 @@ app.config(function ($routeProvider) {
     $routeProvider.otherwise({ redirectTo: "/news/stories" });
 })
 
+app.controller("storyPageController", ["$scope", "$routeParams", "$http",
+    function ($scope, $routeParams, $http) {
+        console.log($routeParams);
+        $http({
+            method: "GET",
+            url: "/api/stories/" + $routeParams.storyID
+        }).then(resp => {
+            console.log(resp.data);
+            $scope.story = resp.data;
+        })
+    }])
+
 app.controller("mainNewsController", ["$scope", "$http", function ($scope, $http) {
     $scope.charLimit = 5;
 

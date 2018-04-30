@@ -3,7 +3,7 @@
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="story in stories track by $index">
             <div><span class="badge badge-secondary">{{story.Category.Name}}</span></div>
-            <h3><a href="#!/stories/{{story.ID}}">{{story.Headline}}</a></h3>
+            <h3><a href="#!/news/stories/{{story.ID}}">{{story.Headline}}</a></h3>
             <p>{{story.BodyContent | limitTo : 120}}...</p> <!--STILL NEED TO LIMIT CHAR COUNT-->
         </li>
     </ul>
