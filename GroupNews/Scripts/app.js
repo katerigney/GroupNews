@@ -37,6 +37,8 @@ app.controller("createStoryController", ["$scope", "$routeParams", "$http", "$lo
 
     $scope.submitStory = () => {
         console.log("Submit button was clicked!")
+        console.log($scope.authorInput);  
+        console.log($scope.categoryInput);  
         $http({
             method: "POST",
             url: "/api/createStory",
@@ -51,7 +53,7 @@ app.controller("createStoryController", ["$scope", "$routeParams", "$http", "$lo
             $scope.story = resp.data;
 
             ID = resp.data.ID;
-            $location.path("/news/stories/" + ID)
+            //$location.path("/news/stories/" + ID)
         })
     }
 }])

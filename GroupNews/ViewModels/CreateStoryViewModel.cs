@@ -12,6 +12,6 @@ namespace GroupNews.ViewModels
         public DateTime Timestamp { get; set; } = DateTime.Now;
 
         public string UserName { get; internal set; }
-        public string Category { get; internal set; }
+        public string Category { get; set; }
     }
 }

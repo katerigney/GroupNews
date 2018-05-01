@@ -25,16 +25,7 @@ namespace GroupNews.Controllers
                 var thisAuthor = db.Users.SingleOrDefault(s => s.UserName == data.UserName);
                 var thisCategory = db.Categories.SingleOrDefault(s => s.Name == data.Category);
 
-                if (thisAuthor == null)
-                {
-                    thisAuthor = new User
-                    {
-                        UserName = data.UserName
-                    };
-                    db.Users.Add(thisAuthor);
-                    db.SaveChanges();
-                }
-
+       
                 if (thisCategory == null)
                 {
                     thisCategory = new Category
@@ -50,9 +41,8 @@ namespace GroupNews.Controllers
                     Headline = data.Headline,
                     BodyContent = data.BodyContent,
                     Timestamp = DateTime.Now,
-                    //User = thisAuthor,
-                    //User = db.Users.First(f => f.UserName == thisAuthor.UserName),
-                    //UserID = thisAuthor.ID,
+                    
+                    UserID = thisAuthor?.ID,
 
                     Category = thisCategory
                 };
