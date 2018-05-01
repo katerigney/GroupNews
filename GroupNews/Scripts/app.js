@@ -32,9 +32,22 @@ app.controller("storyPageController", ["$scope", "$routeParams", "$http",
         })
     }])
 
-app.controller("mainNewsController", ["$scope", "$http", function ($scope, $http) {
-    $scope.charLimit = 5;
+app.controller("createStoryController", ["$scope", "$http", function ($scope, $http) {
 
+    $scope.submitStory = () => {
+        console.log("Submit button was clicked!")
+        //$http({
+        //    method: "GET",
+        //    url: "/api/stories"
+        //}).then(resp => {
+        //    console.log(resp.data);
+        //    $scope.stories = resp.data;
+        //})
+    }
+}])
+
+app.controller("mainNewsController", ["$scope", "$http", function ($scope, $http) {
+ 
     const getLatestStories = () => {
         $http({
             method: "GET",

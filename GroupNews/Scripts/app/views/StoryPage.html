@@ -1,9 +1,9 @@
 ﻿<div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h4 >{{story.User.UserName}}</h4>
-        <h6>{{story.Timestamp}}</h6>
+        <h6>{{story.Timestamp | date:'longDate'}}</h6>
         <h1>{{story.Headline}}</h1>
-        <h3>{{story.BodyContent}}testing</h3>
+        <p>{{story.BodyContent}}</p>
         <span class="badge badge-dark">{{story.Category.Name}}</span>
     </div>
 </div>
