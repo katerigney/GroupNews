@@ -22,6 +22,7 @@ app.config(function ($routeProvider) {
 
 app.controller("storyPageController", ["$scope", "$routeParams", "$http",
     function ($scope, $routeParams, $http) {
+
         console.log($routeParams);
         $http({
             method: "GET",
@@ -32,7 +33,7 @@ app.controller("storyPageController", ["$scope", "$routeParams", "$http",
         })
     }])
 
-app.controller("createStoryController", ["$scope", "$routeParams", "$http", "$window", function ($scope, $routeParams, $http, $window) {
+app.controller("createStoryController", ["$scope", "$routeParams", "$http", "$location", function ($scope, $routeParams, $http, $location) {
 
     $scope.submitStory = () => {
         console.log("Submit button was clicked!")
@@ -49,11 +50,8 @@ app.controller("createStoryController", ["$scope", "$routeParams", "$http", "$wi
             console.log(resp.data);
             $scope.story = resp.data;
 
-            //open story page template with newStory ID
             ID = resp.data.ID;
-            $window.location.href = "news/stories/" + ID;
-
-            //$scope.redirectTo("/stories/:ID");
+            $location.path("/news/stories/" + ID)
         })
     }
 }])
