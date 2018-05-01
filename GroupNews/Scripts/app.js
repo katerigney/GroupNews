@@ -32,17 +32,29 @@ app.controller("storyPageController", ["$scope", "$routeParams", "$http",
         })
     }])
 
-app.controller("createStoryController", ["$scope", "$http", function ($scope, $http) {
+app.controller("createStoryController", ["$scope", "$routeParams", "$http", "$window", function ($scope, $routeParams, $http, $window) {
 
     $scope.submitStory = () => {
         console.log("Submit button was clicked!")
-        //$http({
-        //    method: "GET",
-        //    url: "/api/stories"
-        //}).then(resp => {
-        //    console.log(resp.data);
-        //    $scope.stories = resp.data;
-        //})
+        $http({
+            method: "POST",
+            url: "/api/createStory",
+            data: {
+                Headline: $scope.headlineInput,
+                BodyContent: $scope.bodyContentInput,
+                UserName: $scope.authorInput,
+                Category: $scope.categoryInput
+            }
+        }).then(resp => {
+            console.log(resp.data);
+            $scope.story = resp.data;
+
+            //open story page template with newStory ID
+            ID = resp.data.ID;
+            $window.location.href = "news/stories/" + ID;
+
+            //$scope.redirectTo("/stories/:ID");
+        })
     }
 }])
 
